@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spot the Scam - Online Shopping</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .website {
+            border: 3px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            background: #f8f9fa;
+            position: relative;
+        }
+        
+        .scam {
+            border-color: #e74c3c;
+            background: #ffebee;
+        }
+        
+        .legit {
+            border-color: #27ae60;
+            background: #e8f5e8;
+        }
+        
+        .label {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .scam-label {
+            background: #e74c3c;
+        }
+        
+        .legit-label {
+            background: #27ae60;
+        }
+        
+        .website-header {
+            background: #2c3e50;
+            color: white;
+            padding: 10px;
+            margin: -20px -20px 15px -20px;
+            border-radius: 7px 7px 0 0;
+            font-size: 0.9em;
+        }
+        
+        .scam .website-header {
+            background: #c0392b;
+        }
+        
+        .site-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .product {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .product-image {
+            width: 100px;
+            height: 100px;
+            background: #ecf0f1;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            color: #7f8c8d;
+        }
+        
+        .product-info h3 {
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+        }
+        
+        .price {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #7f8c8d;
+            margin-right: 10px;
+        }
+        
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        
+        .features li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .payment-options {
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+        
+        .contact-info {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        
+        .red-flags {
+            margin-top: 30px;
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .red-flags h3 {
+            color: #856404;
+            margin-top: 0;
+        }
+        
+        .flags-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .flag-item {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .reveal-button {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .reveal-button:hover {
+            background: #2980b9;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🕵️‍♀️ SPOT THE SCAM</h1>
+        <p class="subtitle">Can you tell which online store is legitimate and which is a scam?</p>
+        
+        <div class="comparison">
+            <!-- SCAM WEBSITE -->
+            <div class="website scam">
+                <div class="label scam-label hidden" id="scam-label">❌ SCAM</div>
+                <div class="website-header">🔒 amazn-deals-store.net</div>
+                <div class="site-name">AMAZN MEGA DEALS!!!</div>
+                
+                <div class="product">
+                    <div class="product-image">📱<br>iPhone Image</div>
+                    <div class="product-info">
+                        <h3>Brand New iPhone 15 Pro Max!!!</h3>
+                        <div class="price">
+                            <span class="original-price">$1,199</span>
+                            <span style="color: #e74c3c;">$299 TODAY ONLY!!!</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <ul class="features">
+                    <li>✅ 100% Authentic Guarenteed</li>
+                    <li>✅ Free Shiping Worldwide</li>
+                    <li>✅ 1000+ Happy Customers!</li>
+                    <li>✅ Act Fast - Only 3 Left!!!</li>
+                </ul>
+                
+                <div class="payment-options">
+                    <strong>Payment:</strong> iTunes Gift Cards, Google Play Cards, Cash App Only
+                </div>
+                
+                <div class="contact-info">
+                    <strong>Contact:</strong> deals@email.com<br>
+                    <strong>Company:</strong> Best Deals LLC
+                </div>
+            </div>
+            
+            <!-- LEGITIMATE WEBSITE -->
+            <div class="website legit">
+                <div class="label legit-label hidden" id="legit-label">✅ LEGITIMATE</div>
+                <div class="website-header">🔒 www.apple.com</div>
+                <div class="site-name">Apple</div>
+                
+                <div class="product">
+                    <div class="product-image">📱<br>iPhone Image</div>
+                    <div class="product-info">
+                        <h3>iPhone 15 Pro Max</h3>
+                        <div class="price" style="color: #2c3e50;">$1,199</div>
+                    </div>
+                </div>
+                
+                <ul class="features">
+                    <li>Available in 4 colors</li>
+                    <li>Free delivery on orders over $50</li>
+                    <li>AppleCare+ protection available</li>
+                    <li>Trade-in options available</li>
+                </ul>
+                
+                <div class="payment-options">
+                    <strong>Payment:</strong> Credit Card, PayPal, Apple Pay, Financing Available
+                </div>
+                
+                <div class="contact-info">
+                    <strong>Contact:</strong> 1-800-APL-CARE<br>
+                    <strong>Address:</strong> Apple Inc., Cupertino, CA<br>
+                    <strong>Support:</strong> 24/7 Customer Service
+                </div>
+            </div>
+        </div>
+        
+        <button class="reveal-button" onclick="revealAnswers()">Click to Reveal Answers!</button>
+        
+        <div class="red-flags hidden" id="red-flags">
+            <h3>🚨 Red Flags in the Scam Website:</h3>
+            <div class="flags-list">
+                <div class="flag-item">Suspicious domain name (amazn vs amazon)</div>
+                <div class="flag-item">Too-good-to-be-true price ($299 vs $1,199)</div>
+                <div class="flag-item">Spelling errors ("Guarenteed", "Shiping")</div>
+                <div class="flag-item">Urgent pressure tactics ("TODAY ONLY", "Only 3 Left")</div>
+                <div class="flag-item">Unusual payment methods (gift cards only)</div>
+                <div class="flag-item">No real company address</div>
+                <div class="flag-item">Excessive exclamation marks</div>
+                <div class="flag-item">Vague contact information</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function revealAnswers() {
+            document.getElementById('scam-label').classList.remove('hidden');
+            document.getElementById('legit-label').classList.remove('hidden');
+            document.getElementById('red-flags').classList.remove('hidden');
+            
+            // Hide the button after clicking
+            document.querySelector('.reveal-button').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
