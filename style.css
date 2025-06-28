@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inconsolata', sans-serif;
 }
 
 body {
-    background: #1f242d;
+    object-fit: fill;
+    background-image: url("backgroundimg.webp");
     color: #fff;
 }
 
@@ -29,6 +31,7 @@ body {
     font-size: 25px;
     color: #fff;
     text-decoration: none;
+    font-family: fantasy;
     font-weight: 600;
     cursor: default;
     opacity: 0;
@@ -65,54 +68,45 @@ body {
 }
 
 .home-content {
-    max-width: 600px;
-}
-
-.home-content h3 {
-    font-size: 32px;
-    font-weight: 700;
-    opacity: 0;
-    animation: slideBottom 1s ease forwards;
-    animation-delay: 0.7s;
-}
-
-.home-content h3:nth-of-type(2) {
-    margin-bottom: 30px;
-}
-
-.home-content h3 span {
-    color: #0ef;
+    max-width: 1000px;
 }
 
 .home-content h1 {
-    font-size: 56px;
+    font-size: 70px;
     font-weight: 700;
-    margin: -3px 0;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 50px 100px;
+    height: 100px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.5s;
 }
 
 .home-content p {
-    font-size: 14px;
+    font-size: 16px;
+    height: 40px;
 }
 
-.leme-img img {
-    max-width: 400px;
-    margin-right: -20px;
+.home-content p span {
+    font-size: 40px;
+    font-weight: 700;
+    color: #ffa500;
 }
 
 .social-media a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: transparent;
     border: 2px solid #0ef;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 30px;
     color: #0ef;
     text-decoration: none;
-    margin: 30px 15px 30px 0;
-    transition: .5s ease;
+    margin: 10px 15px 10px 0;
+    transition: .3s ease;
 }
 
 .social-media a:hover {
@@ -132,6 +126,14 @@ body {
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
+    margin: 100px 15px 50px 0;
+}
+
+.btn:hover {
+    background: #1f242d;
+    color: #0ef;
+    transition: .3s ease;
+    box-shadow: 0 0 10px #1f242d;
 }
 
 /* KEYFRAMES ANIMATION */
@@ -169,4 +171,13 @@ body {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+#typewriter::after {
+    content: "|";
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
 }
