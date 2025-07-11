@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width"; initial-scale="1.0">
+    <meta name="keywords" content="Cody Thongpitukthavorn, portfolio, portfolio website, personal portfolio, Cody, data science">
+    <meta name="description" content="Welcome to Cody's Portfolio Website!">
+    <title>Cody's Portfolio</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!--Boxicon-->
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+</head>
+
+
+<body>
+
+
+<!--Navbar start-->
+<header class="header">
+    <a href="#" class="logo">Cxdy05</a>
+    <nav class="navbar">
+        <a href="#home" style="--i:1;" class="active">Home</a>
+        <a href="#about" style="--i:2;">About</a>
+        <a href="#skills" style="--i:3;">Skills</a>
+        <a href="#education" style="--i:4;">Education</a>
+        <a href="#contact" style="--i:6;">Contact Me</a>
+    </nav>
+</header>
+<!--Navbar end-->
+
+
+<!--Home Page start-->
+<section class="home" id="home">
+    <canvas id="bg-canvas"></canvas>
+    <div class="home-content">
+        <h2>Hello, It is I... <br>Cody <span>Thongpitukthavorn</span></h2>
+        <p>And I'm pursuing <span id="typewriter"></span></p>
+        <a href="#about" class="btn">
+            <span>About Me</span>
+            <i class="fas fa-arrow-circle-down"></i>
+        </a>
+        <div class="social-media">
+            <a href="#" style="--i:1;"><i class='bxl  bx-github'></i> </a>
+            <a href="#" style="--i:2;"><i class='bxl  bx-instagram'></i> </a>
+            <a href="#" style="--i:3;"><i class='bxl  bx-linkedin'></i> </a>
+            <a href="#" style="--i:4;"><i class='bxl  bx-facebook'></i> </a>
+        </div>
+    </div>
+    <div class="home-image">
+        <img draggable="false" class="tilt" src="home.jpg" alt="">
+    </div>
+</section>
+<!--Home Page end-->
+
+
+<!--About Page start-->
+<section class="about" id="about">
+    <h2 class="heading">
+        <i class="fas fa-user-alt"></i> About <span>Me</span>
+    </h2>
+
+    <div class="row">
+        
+        <div class="image">
+            <img draggable="false" class="tilt" src="about.jpeg" alt="">
+        </div>
+
+        <div class="content">
+            <h3>I'm Cody,</h3>
+            <p>
+                I am a Data Science and Psychology student at the University of Western Australia. 
+                I have a passion for data analysis and bahavioral science, and I am always eager to learn new skills and technologies. 
+                My main goal is to leverage data to solve real-world problems and make a positive impact in the field of data science.
+                My extracurricular activities include sports like football, basketball and volleyball, and I enjoy spending time with my friends.
+            </p>
+            <div class="resumebtn">
+                <a href="#" class="btn">
+                    <span>Download Resumé</span>
+                    <i class="fas fa-file-download"></i>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+</section>
+<!--About Page end-->
+
+
+<!--Skills Page start-->
+<section class="skills" id="skills">
+    <h2 class="heading">
+        <i class="fas fa-tools"></i> Skills
+    </h2>
+
+    <div class="row">
+        <div class="skill-box">
+            <h3><i class='bxl  bx-python'></i> Python 3</h3>
+            <div class="progress-bar">
+                <div class="progress" style="width: 64%;" data-label="64%"></div>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <h3><i class='bxl  bx-my-sql'></i> SQL</h3>
+            <div class="progress-bar">
+                <div class="progress" style="width: 75%;" data-label="75%"></div>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <h3><i class='bxl  bx-html5'></i> HTML</h3>
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%;" data-label="70%"></div>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <h3><i class='bxl  bx-css3'></i> CSS</h3>
+            <div class="progress-bar">
+                <div class="progress" style="width: 40%;" data-label="40%"></div>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <h3><i class='bxl  bx-javascript'></i> Javascript</h3>
+            <div class="progress-bar">
+                <div class="progress" style="width: 25%;" data-label="25%"></div>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <h3>Problem-Solving Skills</h3>
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%;" data-label="70%"></div>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <h3>Interpersonal Skills</h3>
+            <div class="progress-bar">
+                <div class="progress" style="width: 90%;" data-label="90%"></div>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <h3>Team Collaboration</h3>
+            <div class="progress-bar">
+                <div class="progress" style="width: 85%;" data-label="85%"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Skills Page end-->
+
+
+<!--Education Page start-->
+<section class="education" id="education">
+    <h1 class="heading">
+        <i class="fas fa-graduation-cap"></i> Education
+    </h1>
+
+    <div class="box-container">
+        <div class="edu-box">
+            <div class="content">
+                <h3>Bachelor of Science in Data Science and Psychology</h3>
+                <p>The University of Western Australia | Crawley, Perth</p>
+                <h4>February 2025 - Present</h4>
+            </div>
+        </div>
+
+        <div class="edu-box">
+            <div class="content">
+                <h3>Diploma Program of the International Baccalaureate</h3>
+                <p>Canadian International School | Jurong West, Singapore</p>
+                <h4>August 2020 - May 2023</h4>
+            </div>
+        </div>
+
+        <div class="edu-box">
+            <div class="content">
+                <h3>International General Certificate of Secondary Education</h3>
+                <p>St.Andrews International School GV | Rayong, Thailand</p>
+                <h4>August 2016 - June 2020</h4>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Education Page end-->
+
+
+<!--Contact Page start-->
+<section class="contact" id="contact">
+    <h2 class="heading">
+        <i class="fas fa-envelope"></i> Contact <span>Me</span>
+    </h2>
+    <div class="contact-content">
+        <div class="image">
+            <img draggable="false" src="contact.webp" alt="">
+        </div>
+
+        <div class="contact-form">
+            <form action="#" method="post">
+                <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="name" placeholder="Name" required>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-phone"></i>
+                    <input type="text" name="phone" placeholder="Phone" required>
+                </div>
+                <div class="message">
+                    <i class="fas fa-comment-dots"></i>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Submit
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+<!--Contact Page end-->
+
+
+<!--Footer Page start-->
+<section class="footer">
+    <h1 class="credit">Designed with
+        <i class="fas fa-heart"></i> by Cody Thongpitukthavorn
+    </h1>
+</section>
+<!--Footer Page end-->
+
+
+<!--Scroll effect-->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('scroll-show');
+            entry.target.classList.remove('scroll-hidden');
+        } else {
+            entry.target.classList.remove('scroll-show');
+            entry.target.classList.add('scroll-hidden');
+        }
+        });
+  }, {
+    threshold: 0.2
+  });
+
+  const targets = document.querySelectorAll(
+        '.about, .skills, .education, .contact, .footer, .home .home-content, .home .home-image'
+  );
+
+  targets.forEach(el => {
+        el.classList.add('scroll-hidden');
+        observer.observe(el);
+  });
+</script>
+
+
+<!--All-->
+<script src="script.js"></script>
+
+
+</body>
+</html>
