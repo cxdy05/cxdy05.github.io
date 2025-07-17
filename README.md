@@ -1,2 +1,2 @@
 # CFC-WinterProject-2025
-CFC Winter Project
+My personal portfolio website built using HTML5, CSS3 and JavaScript.
